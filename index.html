@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app="ngLocale">
-<head>
+<html lang="pl" >
+<head >
   <meta charset="UTF-8">
   <title>Modal Dialog Sandbox</title>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
   <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
   <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
 </head>
-<body>
+<body ng-app="main" ng-controller="MainCtrl as ctrl">
   <div class="btn btn-default">{{"AngularJS"}}</div>
-  <div class="btn btn-success">Bootstrap</div>
+  <div class="btn btn-success" ng-click="ctrl.showMyModal()">Bootstrap</div>
 </body>
 </html>
