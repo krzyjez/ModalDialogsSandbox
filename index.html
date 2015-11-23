@@ -3,13 +3,135 @@
 <head >
   <meta charset="UTF-8">
   <title>Modal Dialog Sandbox</title>
+  <!-- angular -->
   <script src="bower_components/angular/angular.js"></script>
-  <script src="app.js"></script>
+
+  <!-- bootsrap -->
   <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
   <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+
+  <!-- ngDialog -->
+  <script src="bower_components/ng-dialog/js/ngDialog.js"></script>
+  <link href="bower_components/ng-dialog/css/ngDialog.css" rel="stylesheet" />
+  <link href="bower_components/ng-dialog/css/ngDialog-theme-default.css" rel="stylesheet"/>
+  <link href="bower_components/ng-dialog/css/ngDialog-theme-plain.css" rel="stylesheet" />
+
+  <!-- app -->
+  <script src="DialogService/ssDialog.js"></script>
+  <script src="app.js"></script>
+
 </head>
 <body ng-app="main" ng-controller="MainCtrl as ctrl">
-  <div class="btn btn-default">{{"AngularJS"}}</div>
-  <div class="btn btn-success" ng-click="ctrl.showMyModal()">Bootstrap</div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <table style="padding:10px;">
+          <tr>
+            <td>
+              <div class="btn btn-default"
+                   ng-click="ctrl.show({message:'message'})">
+                show message
+              </div>
+            </td>
+            <td> no buttons </td>
+          </tr>
+
+
+        <tr>
+          <td>
+            <div class="btn btn-default"
+                 ng-click="ctrl.show({message:'message', buttons:['ok']})">
+            show
+            </div>
+          </td>
+          <td> ok button </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="btn btn-default"
+               ng-click="ctrl.show({message:'message', buttons:['cancel', 'ok'], default:1})">
+              show
+            </div>
+          </td>
+          <td> ok cancel buttons </td>
+        </tr>
+
+        <tr>
+         <td>
+           <div class="btn btn-default"
+                ng-click="ctrl.show({message:'Message', glyphIcon: 'glyphicon-info-sign', iconColor: '#5bc0de'})"> show
+           </div>
+         </td>
+         <td> help message </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="btn btn-default"
+                 ng-click="ctrl.show({message:'Message', buttons:['ok'], glyphIcon: 'glyphicon-info-sign', iconColor: '#5bc0de'})"> show
+            </div>
+          </td>
+          <td> Info </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="btn btn-default"
+                 ng-click="ctrl.ask('Are you going to do something?')"> Ask yes/no
+            </div>
+          </td>
+          <td> Ask </td>
+        </tr>
+
+          <tr>
+            <td>
+              <div class="btn btn-default"
+                   ng-click="ctrl.ensure('Are you sure?')"> Ensure ok/cancel
+              </div>
+            </td>
+            <td> Ask </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="btn btn-default"
+                   ng-click="ctrl.warning('Its danger, continue?')"> Warning ok/cancel
+              </div>
+            </td>
+            <td> Ask </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="btn btn-default"
+                   ng-click="ctrl.error('Sorry, error!')"> Error
+              </div>
+            </td>
+            <td> Ask </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+    <div >
+      <p></p>
+      <p>It shows how dialog with icon is build:</p>
+      <table >
+        <tr>
+          <td style="vertical-align: top; padding-top: 3px;">
+            <div class="glyphicon glyphicon-exclamation-sign" style="font-size: 40px; color:#5bc0de">
+            </div>
+          </td>
+          <td style="padding-left:10px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dui lorem, accumsan ac augue in, tincidunt
+            cursus ante. Nullam leo lorem, feugiat venenatis semper nec, placerat et lorem. Sed luctus turpis ut mi
+            facilisis venenatis. Donec tincidunt urna nisl, tincidunt eleifend ex auctor in. Praesent commodo eros mauris,
+            ac eleifend ligula euismod a. Pellentesque finibus ultrices massa, in vestibulum magna porta sit amet.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
