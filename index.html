@@ -25,93 +25,49 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <table style="padding:10px;">
-          <tr>
-            <td>
-              <div class="btn btn-default"
-                   ng-click="ctrl.show({message:'message'})">
-                show message
-              </div>
-            </td>
-            <td> no buttons </td>
-          </tr>
+        <div class="btn btn-default"
+             ng-click="ctrl.show({message:'message'})">
+          message without buttons
+        </div><div></div>
+
+        <div class="btn btn-default"
+             ng-click="ctrl.show({message:'message', buttons:['ok']})">
+          (show) one button
+        </div>
+        <div></div>
+
+        <div class="btn btn-default"
+             ng-click="ctrl.show({message:'message', buttons:['cancel', 'ok'], default:1})">
+          (show) two buttons
+        </div><div></div>
+
+        <div class="btn btn-default"
+             ng-click="ctrl.show({message:'Message', glyphIcon: 'glyphicon-info-sign', iconColor: '#5bc0de'})">
+          (show) help info
+        </div><div></div>
 
 
-        <tr>
-          <td>
-            <div class="btn btn-default"
-                 ng-click="ctrl.show({message:'message', buttons:['ok']})">
-            show
-            </div>
-          </td>
-          <td> ok button </td>
-        </tr>
+        <div class="btn btn-default"
+             ng-click="ctrl.info('My info message')"> show info
+        </div><div></div>
 
-        <tr>
-          <td>
-            <div class="btn btn-default"
-               ng-click="ctrl.show({message:'message', buttons:['cancel', 'ok'], default:1})">
-              show
-            </div>
-          </td>
-          <td> ok cancel buttons </td>
-        </tr>
+        <div class="btn btn-default"
+             ng-click="ctrl.ask('Are you going to do something?')"> Ask yes/no
+        </div><div></div>
 
-        <tr>
-         <td>
-           <div class="btn btn-default"
-                ng-click="ctrl.show({message:'Message', glyphIcon: 'glyphicon-info-sign', iconColor: '#5bc0de'})"> show
-           </div>
-         </td>
-         <td> help message </td>
-        </tr>
+        <div class="btn btn-default"
+             ng-click="ctrl.ensure('Are you sure?')"> Ensure ok/cancel
+        </div><div></div>
 
-        <tr>
-          <td>
-            <div class="btn btn-default"
-                 ng-click="ctrl.show({message:'Message', buttons:['ok'], glyphIcon: 'glyphicon-info-sign', iconColor: '#5bc0de'})"> show
-            </div>
-          </td>
-          <td> Info </td>
-        </tr>
+        <div class="btn btn-default"
+             ng-click="ctrl.warning('Its danger, continue?')"> Warning ok/cancel
+        </div><div></div>
 
-        <tr>
-          <td>
-            <div class="btn btn-default"
-                 ng-click="ctrl.ask('Are you going to do something?')"> Ask yes/no
-            </div>
-          </td>
-          <td> Ask </td>
-        </tr>
+        <div class="btn btn-default"
+             ng-click="ctrl.error('Sorry, error!')"> Error
+        </div><div></div>
 
-          <tr>
-            <td>
-              <div class="btn btn-default"
-                   ng-click="ctrl.ensure('Are you sure?')"> Ensure ok/cancel
-              </div>
-            </td>
-            <td> Ask </td>
-          </tr>
 
-          <tr>
-            <td>
-              <div class="btn btn-default"
-                   ng-click="ctrl.warning('Its danger, continue?')"> Warning ok/cancel
-              </div>
-            </td>
-            <td> Ask </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="btn btn-default"
-                   ng-click="ctrl.error('Sorry, error!')"> Error
-              </div>
-            </td>
-            <td> Ask </td>
-          </tr>
-
-        </table>
       </div>
     </div>
     <div >

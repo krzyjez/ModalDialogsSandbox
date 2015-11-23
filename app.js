@@ -14,21 +14,21 @@ function  mainCtrl(ssDialog) {
 
   vm.ask = function(message){
     ssDialog.ask(message).then(function(){
-      ssDialog.showInfo("confirmed!");
+      ssDialog.info("confirmed!");
       }
     );
   };
 
   vm.ensure = function(message){
     ssDialog.ensure(message).then(function(){
-        ssDialog.showInfo("confirmed!");
+        ssDialog.info("confirmed!");
       }
     );
   };
 
   vm.warning = function(message){
     ssDialog.warning(message).then(function(){
-        ssDialog.showInfo("confirmed!");
+        ssDialog.info("confirmed!");
       }
     );
   };

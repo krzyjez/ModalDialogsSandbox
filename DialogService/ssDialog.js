@@ -32,6 +32,7 @@
       var _infoColor = '#31B0D5';
       var _warningColor = '#EC971F';
       var _errorColor = '#C9302C';
+      var _questionColor = '#449D44';
 
       //region Public members
 
@@ -79,7 +80,7 @@
         })
       };
 
-      this.showInfo = function(message){
+      this.info = function(message){
         return this.showDialog({
           message: message,
           buttons: ['ok'],
@@ -95,7 +96,7 @@
           default: 0,
           confirm: 0,
           iconGlyph: 'glyphicon-question-sign',
-          iconColor: _warningColor
+          iconColor: _questionColor
         })
       };
 
